@@ -1,0 +1,28 @@
+<configuration>
+  <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+    <Target>System.out</Target>
+    <encoder>
+      <pattern>%d{ HH:mm:ss SSS} %p [%t]:%m%n</pattern>
+    </encoder>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>INFO</level>
+    </filter>
+  </appender>
+  <appender name="File" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <File>logs/ets-ww.log</File>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>logs/ets-ww.%d{yyyy-MM-dd}.log</fileNamePattern>
+    </rollingPolicy>
+    <Append>true</Append>
+    <encoder>
+      <pattern>%d{HH:mm:ss SSS} %p [%t]:%m%n</pattern>
+    </encoder>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>INFO</level>
+    </filter>
+  </appender>
+  <root level="info">
+    <appender-ref ref="Console"/>
+    <appender-ref ref="File"/>
+  </root>
+</configuration>

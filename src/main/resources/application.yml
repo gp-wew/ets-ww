@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=ets-ww
+    username: sa
+    password: test
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    show-sql: true
+    hibernate:
+     dialect: org.hibernate.dialect.SQLServer2017Dialect
+     ddl-auto: create-drop
+
+server:
+  servlet:
+    context-path: /ets-ww
+  port: 8080
+
+swagger:
+  enabled: true
+  package: com.swire.etsww.controller
+
+wechat:
+  cp:
+    corpId: ww135e9a631a5e7d2d
+    appConfigs:
+      - agentId: 1000002
+        secret: kfuZUeNkA4FZdUrbXS0nM2tjOlvEGRQ5gLe1Pd6ThGc
+      #        token: 111
+      #        aesKey: 111
+      - agentId: 1000003
+        secret: o06elzdnxNxTy_ubhVYRxdsOPbZsLK2qic6OyKMsbAA
+#        token: 111
+#        aesKey: 111
