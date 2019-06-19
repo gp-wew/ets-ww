@@ -84,12 +84,10 @@ public class SearchFilter {
 					e.printStackTrace();//TODO
 				}
 			}
-
 			// 创建searchFilter
 			SearchFilter filter = new SearchFilter(filedName, operator, value);
 			filters.put(key, filter);
 		}
-
 		return filters;
 	}
 }
