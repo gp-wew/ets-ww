@@ -48,7 +48,6 @@ public class SearchFilter {
 			//GT_date_DATETIME
 			//ISNULL_type
 			//NEQ_status
-
 			// 拆分operator、filedAttribute、type
 			String[] names = StringUtils.split(key, "_");
 //			if (names.length < 2) {
