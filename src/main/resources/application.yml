@@ -9,7 +9,24 @@ spring:
     hibernate:
      dialect: org.hibernate.dialect.SQLServer2017Dialect
      ddl-auto: create-drop
-
+ebean:
+  packages: com.swire.etsww.domain
+  ddl:
+    generate: false
+    run: false
+  migration:
+    run: false
+  debug:
+    sql: true
+    lazyload: false
+    logging:
+      logfilesharing: all
+      directory: logs
+      iud: sql
+      query: sql
+      sqlquery: sql
+      txnCommit: none
+  mappingLocations: classpath:/ebean-xml-mappings
 server:
   servlet:
     context-path: /ets-ww

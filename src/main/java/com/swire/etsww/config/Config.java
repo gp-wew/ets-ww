@@ -15,7 +15,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Slf4j
 @Configuration
-@ComponentScan({"com.swire"})
+@ComponentScan({"com.swire.etsww","com.swire.etsww.service"})
 @EntityScan({"com.swire.etsww.domain"})
 @EnableEbeanRepositories(basePackages ={"com.swire.etsww.repository"})
 public class Config implements WebMvcConfigurer {
